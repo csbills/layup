@@ -9,7 +9,7 @@
     height: calc(95vh - (var(--header-height) + 100px ));
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 .jerseyContainer {
