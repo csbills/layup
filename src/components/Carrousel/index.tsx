@@ -20,10 +20,9 @@ export default function Carrousel() {
                 autoPlay
                 autoPlayInterval={3000}
                 disableButtonsControls
-                animationType="fadeout"
             >
-                <Image src={lakersFrontJersey} width="250px" height="250px" className="sliderimg" />
-                <Image src={lakersBackJersey} width="250px" height="250px" className="sliderimg" />
+                <Image src={lakersFrontJersey} layout="responsive" className="sliderimg" />
+                <Image src={lakersBackJersey} layout="responsive" className="sliderimg" />
             </AliceCarousel>
         </div>
     )
