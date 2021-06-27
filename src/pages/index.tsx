@@ -74,6 +74,19 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        <div className={styles.detailsContainer}>
+          <div style={{ background: '#ffff', padding: '10px' }}>
+            <h1>DETALHES</h1>
+            <div className={styles.lineRounded} style={{ background: corSecundaria }}></div>
+            <span>Marca: Nike</span>
+            <span>Material: 100% Polyester</span>
+            <span>Time: Los Angeles Lakers</span>
+            <span>Cor: Amarelo/Roxo</span>
+            <span>Réplica de 1ª Linha</span>
+          </div>
+        </div>
+
       </div>
 
       <div className={styles.jerseyFooter}>
