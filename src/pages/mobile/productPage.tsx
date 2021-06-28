@@ -2,13 +2,15 @@ import Header from '../../components/Header';
 import Carrousel from '../../components/Carrousel';
 import styles from '../../styles/mobile/ProductPage.module.scss';
 
-import { IoCartOutline, IoStarSharp, IoStarHalfSharp } from 'react-icons/io5';
+import { IoCartOutline, IoStarSharp, IoStarHalfSharp, IoAdd } from 'react-icons/io5';
+import { RiSubtractLine } from 'react-icons/ri';
 import { useState } from 'react';
 
 let corSecundaria = '#552583';
 
 export default function Home() {
     const [quantity, setQuantity] = useState(1);
+    const [size, setSize] = useState('P');
 
     function handleQuantityLess() {
         if (quantity > 1) {
@@ -35,27 +37,52 @@ export default function Home() {
 
                         <div className={styles.actionsContainer}>
                             <div className={styles.quantityButton}>
-                                <button onClick={handleQuantityLess}>{'<'}</button>
+                                <button onClick={handleQuantityLess}><RiSubtractLine /></button>
                                 <span>{quantity}</span>
-                                <button onClick={() => setQuantity(quantity + 1)}>{'>'}</button>
+                                <button onClick={() => setQuantity(quantity + 1)}><IoAdd /></button>
                             </div>
 
                             <div className={styles.sizeContainer}>
-                                <div className={styles.buttonSize}>
-                                    <span>P</span>
-                                </div>
 
-                                <div className={styles.buttonSizeActive}>
-                                    <span>M</span>
-                                </div>
+                                {size === 'P' ? (
+                                    <div className={styles.buttonSizeActive} onClick={() => setSize('P')}>
+                                        <span>P</span>
+                                    </div>
+                                ) : (
+                                    <div className={styles.buttonSize} onClick={() => setSize('P')}>
+                                        <span>P</span>
+                                    </div>
+                                )}
 
-                                <div className={styles.buttonSize}>
-                                    <span>G</span>
-                                </div>
+                                {size === 'M' ? (
+                                    <div className={styles.buttonSizeActive} onClick={() => setSize('M')}>
+                                        <span>M</span>
+                                    </div>
+                                ) : (
+                                    <div className={styles.buttonSize} onClick={() => setSize('M')}>
+                                        <span>M</span>
+                                    </div>
+                                )}
 
-                                <div className={styles.buttonSize}>
-                                    <span>GG</span>
-                                </div>
+                                {size === 'G' ? (
+                                    <div className={styles.buttonSizeActive} onClick={() => setSize('G')}>
+                                        <span>G</span>
+                                    </div>
+                                ) : (
+                                    <div className={styles.buttonSize} onClick={() => setSize('G')}>
+                                        <span>G</span>
+                                    </div>
+                                )}
+
+                                {size === 'GG' ? (
+                                    <div className={styles.buttonSizeActive} onClick={() => setSize('GG')}>
+                                        <span>GG</span>
+                                    </div>
+                                ) : (
+                                    <div className={styles.buttonSize} onClick={() => setSize('GG')}>
+                                        <span>GG</span>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
