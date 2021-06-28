@@ -15,8 +15,8 @@ export default function Carrousel() {
                 autoPlayInterval={3000}
                 disableButtonsControls
             >
-                <Image src={lakersFrontJersey} layout="responsive" className="sliderimg" />
-                <Image src={lakersBackJersey} layout="responsive" className="sliderimg" />
+                <Image src={lakersFrontJersey} layout="responsive" className="sliderimg" quality={100} />
+                <Image src={lakersBackJersey} layout="responsive" className="sliderimg" quality={100} />
             </AliceCarousel>
         </div>
     )
