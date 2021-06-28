@@ -11,10 +11,11 @@ let corSecundaria = '#552583';
 export default function Home() {
     const [quantity, setQuantity] = useState(1);
     const [size, setSize] = useState('P');
+    const [price, setPrice] = useState(179.9);
 
     function handleQuantityLess() {
         if (quantity > 1) {
-            setQuantity(quantity - 1)
+            setQuantity(quantity - 1);
         }
     }
 
@@ -166,7 +167,7 @@ export default function Home() {
 
             <div className={styles.jerseyFooter}>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                    <span>R$179,90</span>
+                    <span>R${(price * quantity).toLocaleString('pt-br', {minimumFractionDigits: 2})}</span>
                     <button style={{ background: corSecundaria }}>CARRINHO<IoCartOutline style={{ marginLeft: '10px', fontSize: '1rem' }} /></button>
                 </div>
             </div>

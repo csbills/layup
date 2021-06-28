@@ -97,6 +97,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     span {
         font-weight: bold;
@@ -112,6 +113,7 @@
     align-items: center;
     color: var(--white);
     background-color: #552583;
+    cursor: pointer;
 
     span {
         font-weight: bold;
